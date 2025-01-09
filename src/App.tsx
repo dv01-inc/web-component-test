@@ -23,10 +23,15 @@ function App() {
         <UserGreeting name={name}/>
         <Todos name={name}/>
       </div>
+
       <h1 className='italic mb-3'>Web Components</h1>
       <div className='mb-3'>
-        <wc-test-component name={name}></wc-test-component>
-        <wc-todos name={name}></wc-todos>
+        <wc-test-component name={name}>
+          <p>Your need to "import ./defineCustomElements.ts"</p>
+        </wc-test-component>
+        <wc-todos name={name}>
+          <p>Your need to "import ./defineCustomElements.ts"</p>
+        </wc-todos>
       </div>
     </>
   )
