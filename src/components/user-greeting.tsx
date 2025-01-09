@@ -1,5 +1,5 @@
-const UserGreeting = ({ userName }: {userName:string}) => {
-  return <div>Hello, {userName}!</div>;
+const UserGreeting = ({ name }: {name:string}) => {
+  return <div>Hello, {name}!</div>;
 };
 
 export default UserGreeting;

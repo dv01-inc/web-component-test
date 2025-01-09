@@ -19,17 +19,12 @@ export default defineConfig({
     // }),
   ],
   build: {
-    // lib: {
-    //   entry: 'src/defineCustomElements.ts',
-    //   name: 'WCTestComponent',
-    //   fileName: (format) => `wc-test-component.${format}.js`,
-    //   formats: ['es', 'umd'], // Ensure compatibility with other apps
-    // },
     lib: {
+      //all custom elements defined in this file will be bundled into a single file
       entry: 'src/defineCustomElements.ts',
-      name: 'WCTodos',
-      fileName: (format) => `wc-todos.${format}.js`,
-      formats: ['es', 'umd'], // Ensure compatibility with other apps
+      name: 'CustomElements',
+      fileName: (format) => `custom-elements.${format}.js`,
+      formats: ['es', 'umd'],
     },
     rollupOptions: {
       // external: ['react', 'react-dom'], // TODO: rely on consumer to have react and react-dom installed - but this results in errors in the build files when consuming (different errors for es and umd)
