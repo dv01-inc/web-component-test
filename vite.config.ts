@@ -6,12 +6,13 @@ import { viteStaticCopy } from 'vite-plugin-static-copy'
 export default defineConfig({
   plugins: [
     react(),
+    // copy the custom-element-types.d.ts file to the dist folder
     viteStaticCopy({
       targets: [
-        { src: 'src/web-component-types.d.ts', dest: '' },
+        { src: 'src/custom-element-types.d.ts', dest: '' },
       ],
     }),
-    // TODO: better to use DTS files for typescript types?  this currently outputs an empty file
+    // FIXME: better to use DTS files for typescript types?  this currently outputs an empty file
     // dts({
     //   outDir: 'dist/types',
     //   insertTypesEntry: true, // Automatically adds a "types" entry in package.json
@@ -20,14 +21,19 @@ export default defineConfig({
   ],
   build: {
     lib: {
-      //all custom elements defined in this file will be bundled into a single file
+      //all custom elements defined in this file will be bundled and defined into custom-elements.[es|umd].js
       entry: 'src/defineCustomElements.ts',
       name: 'CustomElements',
       fileName: (format) => `custom-elements.${format}.js`,
       formats: ['es', 'umd'],
     },
     rollupOptions: {
-      // external: ['react', 'react-dom'], // TODO: rely on consumer to have react and react-dom installed - but this results in errors in the build files when consuming (different errors for es and umd)
+      // FIXME: external - rely on consumer to have react and react-dom installed - but this results in error when trying to use the umd file
+      // UMD error: Cannot read properties of undefined (reading '__SECRET_INTERNALS_DO_NOT_USE_OR_YOU_WILL_BE_FIRED') <- react error
+      // size with the external property:
+      // included: es - 3.3mb, umd - 3.1mb
+      // excluded: es - 4mb, umd - 3.6mb
+      // external: ['react', 'react-dom'],
       output: {
         globals: {
           react: 'React',
