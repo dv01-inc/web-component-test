@@ -28,7 +28,7 @@ export default defineConfig({
       formats: ['es', 'umd'],
     },
     rollupOptions: {
-      // FIXME: external - rely on consumer to have react and react-dom installed - but this results in error when trying to use the umd file
+      // FIXME: external option - rely on consumer to have react and react-dom installed - but this results in error when trying to use the umd file
       // UMD error: Cannot read properties of undefined (reading '__SECRET_INTERNALS_DO_NOT_USE_OR_YOU_WILL_BE_FIRED') <- react error
       // size with the external property:
       // included: es - 3.3mb, umd - 3.1mb
@@ -44,6 +44,7 @@ export default defineConfig({
   },
   resolve: {
     alias: {
+      // workaround for the 'util' module not found error in Waterfall
       util: "rollup-plugin-node-polyfills/polyfills/util",
     },
   },
