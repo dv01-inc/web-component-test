@@ -2,10 +2,15 @@
   "compilerOptions": {
     "module": "ESNext",
     "target": "ESNext",
+    "declaration": true,
+//    "emitDeclarationOnly": false, // Optional: Combine declaration and JS output
+//    "outDir": "dist",            // Ensure the output goes to the correct folder
+//    "allowJs": true,             // If you're using JavaScript files
+    "esModuleInterop": true
   },
   "files": [],
   "references": [
     { "path": "./tsconfig.app.json" },
     { "path": "./tsconfig.node.json" }
-  ]
+  ],
 }
