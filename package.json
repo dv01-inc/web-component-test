@@ -10,9 +10,12 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@dv01-inc/waterfall-ui": "^6.19.2",
     "r2wc": "^0.0.4",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
+    "react-router-dom": "^7.1.1",
+    "uuid": "^11.0.4",
     "vite-plugin-dts": "^4.4.0"
   },
   "devDependencies": {
