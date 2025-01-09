@@ -1,7 +1,7 @@
 import { Button, FlexContainer } from '@dv01-inc/waterfall-ui';
 
 import { TodosCardProps } from './todo-card.tsx';
-import { Todo } from 'src/components/TodoApp/index.tsx';
+import { Todo } from './index.tsx';
 
 interface TodoItemProps extends Omit<TodosCardProps, "todos"> {
   todo: Todo

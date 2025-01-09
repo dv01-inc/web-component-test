@@ -1,6 +1,7 @@
-import { Todo } from 'src/components/TodoApp/index.tsx';
+
 import { Card, FlexContainer } from '@dv01-inc/waterfall-ui';
 import { TodoItem } from './todo-item.tsx';
+import { Todo } from './index.tsx';
 
 export interface TodosCardProps {
   isCompleted: boolean

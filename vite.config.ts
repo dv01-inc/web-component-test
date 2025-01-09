@@ -19,19 +19,31 @@ export default defineConfig({
     // }),
   ],
   build: {
+    // lib: {
+    //   entry: 'src/defineCustomElements.ts',
+    //   name: 'WCTestComponent',
+    //   fileName: (format) => `wc-test-component.${format}.js`,
+    //   formats: ['es', 'umd'], // Ensure compatibility with other apps
+    // },
     lib: {
-      entry: 'src/index.ts',
-      name: 'WCTestComponent',
-      fileName: (format) => `wc-test-component.${format}.js`,
+      entry: 'src/defineCustomElements.ts',
+      name: 'WCTodos',
+      fileName: (format) => `wc-todos.${format}.js`,
       formats: ['es', 'umd'], // Ensure compatibility with other apps
     },
     rollupOptions: {
+      // external: ['react', 'react-dom'], // TODO: rely on consumer to have react and react-dom installed - but this results in errors in the build files when consuming (different errors for es and umd)
       output: {
         globals: {
           react: 'React',
           'react-dom': 'ReactDOM',
         },
       },
+    },
+  },
+  resolve: {
+    alias: {
+      util: "rollup-plugin-node-polyfills/polyfills/util",
     },
   },
 });
