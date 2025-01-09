@@ -1,0 +1,9 @@
+.container {
+    color: rgba(255, 255, 255, 0.87);
+    background-color: black;
+    display: block;
+    margin: 0 auto;
+    width: 600px;
+    max-width: 600px;
+    padding: 20px;
+}
