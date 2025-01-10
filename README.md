@@ -37,6 +37,7 @@ Note: Be sure to check out comments in `App.tsx`, `vite.config.ts`, and `defineC
 
 
 ### Issues
+- bundle size - the un-gzipped js file for the two small web components is 11mb due primarily to Waterfall...need to figure out how to improve that
 - styles - ~~whether css modules or waterfall components, styles are not being applied to the web components. Changing the `r2wc` `shadow` option to `false` does not help.~~ 
     - **Update**: not using the `shadow` option when defining custom elements in `defineCustomElements.ts` allowed the web component to pickup tailwind/waterfall styles from the parent app.
 - vite.config.ts - there is more than likely **a lot** of room for improvement in the vite config file. I'm new to configuring this file, so I'm sure there are better ways to do things.
