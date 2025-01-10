@@ -10,7 +10,7 @@ along with the same `UserGreeting` & `Todos` as web components (using r2wc).
 
 Building the app (`npm run build`) will create a `dist` folder which includes `dv01-web-components.es.js`, `dv01-web-components.umd.js`, 
 `dv01-web-components.css`, and `dv01-web-components.d.ts` (to avoid TS errors by adding the custom elements to JSX.IntrinsicElements) files.
-The `dist` folder can be copy/pasted into another vite app (in the future added via cdn or npm package) to use the web components, 
+The `dist` folder can be copy/pasted into another app (in the future added via cdn or npm package) to use the web components, 
 as long as the necessary files are imported. 
 e.g.:
 ```jsx
