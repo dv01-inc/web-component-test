@@ -47,7 +47,7 @@ export const Todos = ({name}:TodosProps)=>{
   return (
     <div className={styles.container}>
       <FlexContainer flexDirection='flex-col' justifyContent="justify-center" alignItems="items-center" width='w-full' flexGap='gap-5'>
-        <h1>{name ? `${name}'s`: 'Nameless Ones'} Todos</h1>
+        <h1>{name ? `${name}'s`: "Nameless One's"} Todos</h1>
         <FlexContainer width='w-full'>
           <TextField
             placeholder="Add a todo item"
