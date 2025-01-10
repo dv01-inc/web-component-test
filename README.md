@@ -1,7 +1,7 @@
 ## r2wc test repo
 A repo to get a feel for creating and using web components with React & r2wc
 
-After cloning the repo and installing packages, start up the app (`npm run dev`) to see:
+After cloning the repo and installing packages (don't forget your `.npmrc` file!), start up the app (`npm run dev`) to see:
 
 ![readme.png](readme.png)
 
