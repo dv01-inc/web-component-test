@@ -22,5 +22,5 @@
     "noFallthroughCasesInSwitch": true,
     "noUncheckedSideEffectImports": true
   },
-  "include": ["src", "src/custom-element-types.d.ts"]
+  "include": ["src", "src/dv01-web-components.d.ts"]
 }
